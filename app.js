@@ -1,55 +1,36 @@
-// var, let, const
+// PRIMITIVES TYPES
 
-// var name = 'John Doe';
-// console.log(name);
-// name = 'Steve Smith';
-// console.log(name);
+// String
+const name = 'John Doe';
+console.log(typeof name);
+// Number
+const age = 45;
+console.log(typeof age);
+// Boolean
+const hasKids = true;
+console.log(typeof hasKids);
+// Null
+const car = null;
+console.log(typeof car);
+// Undefined
+let test;
+console.log(typeof test);
+// Symbol
+const sym = Symbol();
+console.log(typeof sym);
 
-// // Init var
-// var greeding;
-// console.log(greeding);
-// greeding = 'Hello';
-// console.log(greeding);
-
-// // letters, numbers, _, $
-// // Cannot start with a number
-// var _name = 'Eric';
-
-// // Multi word vars
-// var firsName = 'John'; //camelCase
-// var first_name = 'Sara'; // Underscore
-// var FirstName = 'Tom'; // PascalCase
-// var firstname;
-
-// let and const
-// LET
-// let firstName;
-
-// let firstName = 'John Doe';
-// console.log(firstName);
-// firstName = 'Steve Smith';
-// console.log(firstName);
-
-// CONST
-const firstName = 'John';
-console.log(firstName);
-
-// we cant reasing
-// firstName = "Mark";
-
-// have to assign a value
-// cons variable;
-
-const person = {
-  name: 'John',
-  age: 40,
-  sex: 'man'
+// REFERENCE TYPES - Objects
+// Array
+const hobbies = ['movies', 'music', 'running'];
+console.log(typeof hobbies);
+// Object literals
+const addres = {
+  city: 'Boston',
+  state: 'MA',
+  country: 'USA'
 }
-person.name = "Sara";
-person.sex = "female";
-console.log(person);
-
-const numbers = [1, 2, 3, 4, 5, 6];
-numbers.push(6);
-numbers = [1, 2, 3, 4];
-console.log(numbers);
+console.log(typeof addres);
+// dates
+const today = new Date();
+console.log(today);
+console.log(typeof today);
