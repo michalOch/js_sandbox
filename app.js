@@ -1,38 +1,55 @@
-/*
-  multi 
-  line 
-  comments
-*/
+// var, let, const
 
-// Log to console
-console.log('Hello World');
-console.log(123);
-console.log(true);
-var greeding = 'Hello';
-console.log(greeding);
-console.log(1, 23, 4, 5, 6);
-console.log([1, 2, 4, 5, 6, 3, 2, 1]);
+// var name = 'John Doe';
+// console.log(name);
+// name = 'Steve Smith';
+// console.log(name);
 
-console.log({
-  a: 1,
-  b: 2
-});
+// // Init var
+// var greeding;
+// console.log(greeding);
+// greeding = 'Hello';
+// console.log(greeding);
 
-console.table({
-  a: 1,
-  b: 2
-});
+// // letters, numbers, _, $
+// // Cannot start with a number
+// var _name = 'Eric';
 
-console.error('This is some error');
-// console.clear();
-console.warn('This is a warning');
-console.info('This is a info');
+// // Multi word vars
+// var firsName = 'John'; //camelCase
+// var first_name = 'Sara'; // Underscore
+// var FirstName = 'Tom'; // PascalCase
+// var firstname;
 
-console.time('Hello');
-console.log('Hello World');
-console.log('Hello World');
-console.log('Hello World');
-console.log('Hello World');
-console.log('Hello World');
-console.log('Hello World');
-console.timeEnd('Hello');
+// let and const
+// LET
+// let firstName;
+
+// let firstName = 'John Doe';
+// console.log(firstName);
+// firstName = 'Steve Smith';
+// console.log(firstName);
+
+// CONST
+const firstName = 'John';
+console.log(firstName);
+
+// we cant reasing
+// firstName = "Mark";
+
+// have to assign a value
+// cons variable;
+
+const person = {
+  name: 'John',
+  age: 40,
+  sex: 'man'
+}
+person.name = "Sara";
+person.sex = "female";
+console.log(person);
+
+const numbers = [1, 2, 3, 4, 5, 6];
+numbers.push(6);
+numbers = [1, 2, 3, 4];
+console.log(numbers);
