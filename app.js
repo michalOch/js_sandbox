@@ -1,27 +1,64 @@
-const num1 = 100;
-const num2 = 50;
+const firstName = 'William';
+const lastName = "Johnson";
+const age = 36;
+const str = "Hello There, My name is Michal and I'd like to meet you better";
+const tags = 'web design, web development';
+
 let val;
 
-// Simple math with numbers
-val = num1 + num2;
-val = num1 * num2;
-val = num1 / num2;
-val = num1 - num2;
-val = num1 % num2;
+val = firstName + lastName;
 
-// Math objects
-val = Math.PI;
-val = Math.E;
-val = Math.round(2.4);
-val = Math.ceil(2.4);
-val = Math.floor(2.8);
-val = Math.sqrt(64);
-val = Math.pow(8, 2);
-val = Math.abs(-54);
-val = Math.min(2, 33, 44, 21, 11, 55, -1);
-val = Math.max(2, 5, 21, 6, 1, 1, 122, 213412);
-val = Math.random();
-val = Math.floor(Math.random() * 20 + 1);
+// Concatenation
+val = firstName + " " + lastName;
+// Appending
+val = 'Brad ';
+val += 'Traversy';
 
-// output 
+val = 'Hello, my name is ' + firstName + 'and I am ' + age + ' years old';
+
+// Escaping
+val = 'That\'s awensom, I can\'t wait';
+val = "That's awensom, I can't wait";
+
+// Lenght 
+val = firstName.length;
+
+// concat
+val = firstName.concat(' ', lastName);
+
+// to upper/to lower
+val = firstName.toUpperCase();
+val = firstName.toLowerCase();
+
+val = firstName[2];
+
+// indexof
+val = firstName.indexOf('i');
+val = firstName.lastIndexOf('l');
+
+// charAt
+val = firstName.charAt(6);
+val = firstName.charAt('6');
+
+// get last character
+val = firstName.charAt(firstName.length - 1);
+
+// get substrings
+val = firstName.substr(0, 4);
+
+// slice
+val = firstName.slice(0, 4);
+val = firstName.slice(-3);
+
+// split()
+val = str.split(' ');
+val = tags.split(',');
+
+// replace
+val = str.replace(' ', '_');
+
+// includes()
+val = str.includes(' ');
+
+
 console.log(val);
