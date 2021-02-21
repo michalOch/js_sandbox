@@ -1,64 +1,34 @@
-const firstName = 'William';
-const lastName = "Johnson";
-const age = 36;
-const str = "Hello There, My name is Michal and I'd like to meet you better";
-const tags = 'web design, web development';
+const name = 'John';
+const age = 31;
+const job = 'Wev developer';
+const city = 'Miami';
+let html;
 
-let val;
+// without template strings (es5)
+html = '<ul><li>Name: ' + name + '</li><li>Age: ' + age + ' </li><li>Job: ' + job + '</li><li>City: ' + city + ' </li></ul>'
 
-val = firstName + lastName;
+html = '<ul>' +
+  '<li>Name: ' + name + '</li>' +
+  '<li>Age: ' + age + '</li>' +
+  '<li>Job: ' + job + '</li>' +
+  '<li>City: ' + city + '</li>' +
+  '</ul>';
 
-// Concatenation
-val = firstName + " " + lastName;
-// Appending
-val = 'Brad ';
-val += 'Traversy';
+function hello() {
+  return 'hello';
+}
 
-val = 'Hello, my name is ' + firstName + 'and I am ' + age + ' years old';
+// with templete strings (es6)
+html = `
+<ul>
+  <li>Name: ${name}</li>
+  <li>Age: ${age}</li>
+  <li>Job: ${job}</li>
+  <li>City: ${city}</li>
+  <li>${2+2}</li>
+  <li>${hello()}</li>
+  <li>${age > 30 ? 'Over 30' : 'Under 30'}</li>
+</ul>
+`;
 
-// Escaping
-val = 'That\'s awensom, I can\'t wait';
-val = "That's awensom, I can't wait";
-
-// Lenght 
-val = firstName.length;
-
-// concat
-val = firstName.concat(' ', lastName);
-
-// to upper/to lower
-val = firstName.toUpperCase();
-val = firstName.toLowerCase();
-
-val = firstName[2];
-
-// indexof
-val = firstName.indexOf('i');
-val = firstName.lastIndexOf('l');
-
-// charAt
-val = firstName.charAt(6);
-val = firstName.charAt('6');
-
-// get last character
-val = firstName.charAt(firstName.length - 1);
-
-// get substrings
-val = firstName.substr(0, 4);
-
-// slice
-val = firstName.slice(0, 4);
-val = firstName.slice(-3);
-
-// split()
-val = str.split(' ');
-val = tags.split(',');
-
-// replace
-val = str.replace(' ', '_');
-
-// includes()
-val = str.includes(' ');
-
-
-console.log(val);
+document.body.innerHTML = html;
