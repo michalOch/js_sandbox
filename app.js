@@ -1,102 +1,26 @@
-const person = {
-  firstName: 'Steve',
-  lastName: 'Smith',
-  age: 36,
-  email: 'silentSteve@gmail.com',
-  hobbies: ['music', 'sports'],
-  adress: {
-    city: 'Miami',
-    state: 'FL'
-  },
-  getBirthYear: function () {
-    return new Date().getFullYear() - this.age;
-  }
-}
 let val;
 
-val = person;
-// Get the specific value 
-val = person.firstName;
-val = person['firstName'];
-val = person.lastName;
-val = person['lastName'];
-val = person.age;
-val = person.hobbies[1];
-val = person.adress['city'];
-val = person.adress.state;
-val = person.getBirthYear();
+const today = new Date();
+let birthday = new Date('9-10-1981 11:12:00');
+birthday = new Date('September 10 1992');
+birthday = new Date('9/10/1981 11:11:11');
+
+val = today.getMonth();
+val = today.getDate();
+val = today.getDay();
+val = today.getFullYear();
+val = today.getHours();
+val = today.getMinutes();
+val = today.getSeconds();
+val = today.getMilliseconds();
+val = today.getTime();
+
+birthday.setMonth(2);
+birthday.setDate(12);
+birthday.setFullYear(2054);
+birthday.setTime(3);
+birthday.setMinutes(30);
+birthday.setSeconds(12);
+val = birthday;
 
 console.log(val);
-
-const people = [{
-    firstName: 'Steve',
-    lastName: 'Smith',
-    age: 36,
-    email: 'silentSteve@gmail.com',
-    hobbies: ['music', 'sports'],
-    adress: {
-      city: 'Miami',
-      state: 'FL'
-    },
-    getBirthYear: function () {
-      return new Date().getFullYear() - this.age;
-    }
-  },
-  {
-    firstName: 'Greg',
-    lastName: 'McFish',
-    age: 36,
-    email: 'fisher@gmail.com',
-    hobbies: ['music', 'fishing'],
-    adress: {
-      city: 'Alaska',
-      state: 'AL'
-    },
-    getBirthYear: function () {
-      return new Date().getFullYear() - this.age;
-    }
-  },
-  {
-    firstName: 'Ian',
-    lastName: 'Kowalski',
-    age: 36,
-    email: 'pinguin@gmail.com',
-    hobbies: ['breakdance', 'late night show'],
-    adress: {
-      city: 'New York',
-      state: 'NY'
-    },
-    getBirthYear: function () {
-      return new Date().getFullYear() - this.age;
-    }
-  },
-  {
-    firstName: 'Nancy',
-    lastName: 'Dreamland',
-    age: 36,
-    email: 'sexyNancy@gmail.com',
-    hobbies: ['loopdance', 'bikini'],
-    adress: {
-      city: 'Hollywood',
-      state: 'CA'
-    },
-    getBirthYear: function () {
-      return new Date().getFullYear() - this.age;
-    }
-  },
-];
-
-// const people = [{
-//     name: 'John',
-//     age: 30
-//   },
-//   {
-//     name: 'Mike',
-//     age: 23
-//   }
-// ];
-
-for (let i = 0; i < people.length; i++) {
-  console.log(`${people[i].firstName} ${[people[i].lastName]} interessted in: 
-  ${people[i].hobbies}`);
-};
