@@ -1,75 +1,102 @@
-// Create some arrays
-const numbers = [43, 56, 33, 23, 44, 35, 5];
-const numbers2 = new Array(1, 2, 3, 4, 5, 6, 7, 7);
-const fruits = ['Apple', 'Banana', 'Orange', 'Pearl'];
-const mixed = [22, 'Hello', true, {
-  a: 1,
-  b: 2
-}, null, undefined, new Date(), 'everything'];
-
+const person = {
+  firstName: 'Steve',
+  lastName: 'Smith',
+  age: 36,
+  email: 'silentSteve@gmail.com',
+  hobbies: ['music', 'sports'],
+  adress: {
+    city: 'Miami',
+    state: 'FL'
+  },
+  getBirthYear: function () {
+    return new Date().getFullYear() - this.age;
+  }
+}
 let val;
-// Get array lemght
-val = numbers.length;
 
-// Check if is array
-val = Array.isArray(numbers);
-val = Array.isArray('Hello');
+val = person;
+// Get the specific value 
+val = person.firstName;
+val = person['firstName'];
+val = person.lastName;
+val = person['lastName'];
+val = person.age;
+val = person.hobbies[1];
+val = person.adress['city'];
+val = person.adress.state;
+val = person.getBirthYear();
 
-// Get a single value
-// Array is 0 based ordered (index start with 0)
-val = numbers[0];
-
-// Get last element
-val = numbers[numbers.length - 1];
-
-// Inser into Array
-numbers[2] = 100;
-
-// Find index of value
-val = numbers.indexOf(35);
-
-// MUTATING ARRAYS
-// Add on to end
-// numbers.push(250);
-// // Add on to front
-// numbers.unshift(120);
-// // Take off from end
-// val = numbers.pop();
-// // Take off from the from
-// val = numbers.shift();
-// // Splice values 
-// val = numbers.splice(1, 3);
-// // Reverse
-//numbers.reverse();
-
-// CONCATENATE ARRAYS
-val = numbers.concat(numbers2);
-
-// Sort
-val = fruits.sort();
-val = numbers.sort();
-
-// Use the 'compare' func
-val = numbers.sort(function (x, y) {
-  return x - y;
-})
-
-// Reverse sort
-val = numbers.sort(function (x, y) {
-  return y - x;
-})
-
-// Find
-function under50(num) {
-  return num < 50
-}
-
-function over50(num) {
-  return num > 50
-}
-
-val = numbers.find(under50);
-val = numbers.find(over50);
-
-console.log(numbers);
 console.log(val);
+
+const people = [{
+    firstName: 'Steve',
+    lastName: 'Smith',
+    age: 36,
+    email: 'silentSteve@gmail.com',
+    hobbies: ['music', 'sports'],
+    adress: {
+      city: 'Miami',
+      state: 'FL'
+    },
+    getBirthYear: function () {
+      return new Date().getFullYear() - this.age;
+    }
+  },
+  {
+    firstName: 'Greg',
+    lastName: 'McFish',
+    age: 36,
+    email: 'fisher@gmail.com',
+    hobbies: ['music', 'fishing'],
+    adress: {
+      city: 'Alaska',
+      state: 'AL'
+    },
+    getBirthYear: function () {
+      return new Date().getFullYear() - this.age;
+    }
+  },
+  {
+    firstName: 'Ian',
+    lastName: 'Kowalski',
+    age: 36,
+    email: 'pinguin@gmail.com',
+    hobbies: ['breakdance', 'late night show'],
+    adress: {
+      city: 'New York',
+      state: 'NY'
+    },
+    getBirthYear: function () {
+      return new Date().getFullYear() - this.age;
+    }
+  },
+  {
+    firstName: 'Nancy',
+    lastName: 'Dreamland',
+    age: 36,
+    email: 'sexyNancy@gmail.com',
+    hobbies: ['loopdance', 'bikini'],
+    adress: {
+      city: 'Hollywood',
+      state: 'CA'
+    },
+    getBirthYear: function () {
+      return new Date().getFullYear() - this.age;
+    }
+  },
+];
+
+// const people = [{
+//     name: 'John',
+//     age: 30
+//   },
+//   {
+//     name: 'Mike',
+//     age: 23
+//   }
+// ];
+
+for (let i = 0; i < people.length; i++) {
+  console.log(`${people[i].firstName} ${[people[i].lastName]} interessted in: 
+  ${people[i].hobbies}`);
+};
