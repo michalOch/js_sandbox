@@ -1,61 +1,29 @@
-// Window object
-// Window methods object and properties
+// Scope
 
-// Alert
-//window.alert('Hello World');
+// Global scope
+var a = 1;
+let b = 2;
+const c = 3;
 
-// Prompt
-// const input = prompt();
-// alert(input);
+// function test() {
+//   var a = 4;
+//   let b = 5;
+//   const c = 6;
+//   console.log('Function Scope ', a, b, c);
+// }
+// test();
 
-// let name = prompt();
-// alert(`Hello ${name}`);
-
-// Confirm
-// window.confirm("Do you want to delete object?");
-// if (confirm("Are you sure?")) {
-//   alert("Object deleted");
-// } else {
-//   alert("Object not deleted");
+// Block level scope
+// if (true) {
+//   // Block scope
+//   var a = 4;
+//   let b = 5;
+//   const c = 6;
+//   console.log('Block(if) Scope ', a, b, c);
 // }
 
-let val;
+for (var a = 0; a < 10; a++) {
+  console.log(`loop: ${a}`);
+}
 
-// Outer height and width
-val = window.outerHeight;
-val = window.outerWidth;
-
-// Inner height and width
-val = window.innerHeight;
-val = window.innerWidth;
-
-// Scrol points
-val = window.scrollY;
-val = window.scrollX;
-
-// Location Object
-val = window.location;
-val = window.location.hostname;
-val = window.location.port;
-val = window.location.href;
-val = window.location.search;
-
-// Redirect
-//window.location.href = 'http://google.com';
-//window.location.reload();
-
-// History Object
-//val = window.history.go();
-//val = window.history.length;
-
-// Navigator Object
-val = window.navigator;
-val = window.navigator.geolocation;
-val = window.navigator.appCodeName;
-val = window.navigator.appVersion;
-val = window.navigator.userAgent;
-val = window.navigator.platform;
-val = window.navigator.vendor;
-val = window.navigator.language;
-
-console.log(val);
+console.log('Global Scope ', a, b, c);
