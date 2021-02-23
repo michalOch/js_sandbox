@@ -1,143 +1,61 @@
-// loops and iterations
+// Window object
+// Window methods object and properties
 
-// FOR
-// for (let i = 0; i < 10; i++) {
-//   //console.log('Number ' + i);
-//   if (i === 2) {
-//     console.log("2 is my favourite number");
-//     continue;
-//   }
+// Alert
+//window.alert('Hello World');
 
-//   if (i === 5) {
-//     console.log('Stop the loop...')
-//     break;
-//   }
-//   console.log('Number ' + i);
+// Prompt
+// const input = prompt();
+// alert(input);
+
+// let name = prompt();
+// alert(`Hello ${name}`);
+
+// Confirm
+// window.confirm("Do you want to delete object?");
+// if (confirm("Are you sure?")) {
+//   alert("Object deleted");
+// } else {
+//   alert("Object not deleted");
 // }
 
-// WHILE LOOP
-// let i = 0;
-// while (i < 10) {
-//   i++;
-//   console.log(`Number ${i}`);
+let val;
 
-//   if (i === 2) {
-//     console.log(`${i} is my favourite number`);
-//     continue;
-//   }
+// Outer height and width
+val = window.outerHeight;
+val = window.outerWidth;
 
-//   if (i > 7) {
-//     console.log('Time to break a loop');
-//     break;
-//   }
-// }
+// Inner height and width
+val = window.innerHeight;
+val = window.innerWidth;
 
-// DO WHILE
-// let i = 100;
-// console.log(i);
+// Scrol points
+val = window.scrollY;
+val = window.scrollX;
 
-// do {
-//   console.log('Number ' + i);
-//   i++;
-// }
-// while (i < 10);
+// Location Object
+val = window.location;
+val = window.location.hostname;
+val = window.location.port;
+val = window.location.href;
+val = window.location.search;
 
-// LOOP THROUGH ARRAY
-const cars = ['ford', 'audi', 'honda', 'toyota'];
+// Redirect
+//window.location.href = 'http://google.com';
+//window.location.reload();
 
-// cars.forEach(function (car, index) {
-//   console.log(`${index} : ${car}`);
-// });
+// History Object
+//val = window.history.go();
+//val = window.history.length;
 
-// console.log('\n');
+// Navigator Object
+val = window.navigator;
+val = window.navigator.geolocation;
+val = window.navigator.appCodeName;
+val = window.navigator.appVersion;
+val = window.navigator.userAgent;
+val = window.navigator.platform;
+val = window.navigator.vendor;
+val = window.navigator.language;
 
-// cars.forEach(function (car, index, array) {
-//   console.log(`${index} : ${car}`);
-//   console.log(array);
-// });
-
-// for (let i = 0; i < cars.length; i++) {
-//   console.log(cars[i]);
-// }
-
-// console.log('\n');
-
-// let i = 0;
-// while (i < cars.length) {
-//   console.log(cars[i]);
-//   i++;
-// }
-
-// FOREACH
-// cars.forEach(function (car) {
-//   console.log(car);
-// })
-
-// MAP
-// const users = [{
-//     id: 1,
-//     name: 'John'
-//   },
-//   {
-//     id: 2,
-//     name: 'Adam'
-//   },
-//   {
-//     id: 3,
-//     name: 'Diana'
-//   },
-//   {
-//     id: 4,
-//     name: 'Karen'
-//   },
-//   {
-//     id: 5,
-//     name: 'Kate'
-//   },
-//   {
-//     id: 6,
-//     name: 'Barack'
-//   },
-//   {
-//     id: 7,
-//     name: 'Tom'
-//   },
-//   {
-//     id: 8,
-//     name: 'Stan'
-//   },
-//   {
-//     id: 9,
-//     name: 'Linda'
-//   },
-//   {
-//     id: 10,
-//     name: 'Sadam'
-//   },
-//   {
-//     id: 11,
-//     name: 'Muhamet'
-//   },
-
-// ];
-
-// users.forEach(function (user) {
-//   console.log(`User: ${user.id} is ${user.name}`);
-// });
-
-// const ids = users.map(function (user) {
-//   return user.id;
-// });
-
-// console.log(ids);
-
-// FOR IN LOOP
-const user = {
-  firstName: 'John',
-  lastName: 'Doe',
-  age: 40
-};
-
-for (let x in user) {
-  console.log(`${x} : ${user[x]}`);
-}
+console.log(val);
